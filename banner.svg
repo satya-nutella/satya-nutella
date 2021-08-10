@@ -2,8 +2,6 @@
   <foreignObject>
     <html>
       <style>
-        @import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&Open+Sans:wght@700&display=swap");
-
         html {
           box-sizing: border-box;
         }
