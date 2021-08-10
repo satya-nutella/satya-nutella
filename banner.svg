@@ -1,5 +1,5 @@
-<svg width="4in" height="3in" xmlns='http://www.w3.org/Graphics/SVG/svg-19990412.dtd'>
-  <foreignobject system-required="http://www.w3.org/TR/REC-MathML-19980407" width="100" height="50">
+<svg width="4in" height="3in" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject>
     <html>
       <style>
         @import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&Open+Sans:wght@700&display=swap");
@@ -189,5 +189,5 @@
         </main>
       </body>
     </html>
-  </foreignobject>
+  </foreignObject>
 </svg>
