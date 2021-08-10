@@ -1,0 +1,193 @@
+<svg width="4in" height="3in" xmlns='http://www.w3.org/Graphics/SVG/svg-19990412.dtd'>
+  <foreignobject system-required="http://www.w3.org/TR/REC-MathML-19980407" width="100" height="50">
+    <html>
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&Open+Sans:wght@700&display=swap");
+
+        html {
+          box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+
+        body {
+          background-image: radial-gradient(#3a3a3a, #252525);
+          height: 100vh;
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          height: 100vh;
+        }
+
+        .name {
+          animation: blink 3s infinite linear alternate;
+          color: #fff;
+          font-family: "Londrina Outline", sans-serif;
+          font-size: 8rem;
+          font-weight: 700;
+          text-align: center;
+          text-transform: uppercase;
+          text-shadow: 0 0 5px #ff7bac, 0 0 10px #ff7bac, 0 0 20px #ff7bac, 0 0 40px #ff7bac, 0 0 80px #ff7bac, 0 0 100px #ff7bac, 0 0 120px #ff7bac;
+        }
+
+        .name>.letter {
+          margin: 0 9px;
+        }
+
+        @keyframes blink {
+
+          60%,
+          70%,
+          79% {
+            opacity: 1;
+          }
+
+          65%,
+          67%,
+          76%,
+          78% {
+            opacity: 0.2;
+          }
+
+          66%,
+          69%,
+          77% {
+            opacity: 0.8;
+          }
+        }
+
+        .surname {
+          animation: border-flickr 6s ease-in-out 9.54s infinite alternate both;
+          color: #d6d1e8;
+          font-family: "Open Sans", sans-serif;
+          font-size: 2rem;
+          font-weight: 600;
+          padding: 8px 16px;
+          text-align: center;
+          text-transform: uppercase;
+          text-shadow: #a48ff2 2px 2px 10px;
+        }
+
+        .surname>.letter {
+          margin: 0 20px;
+        }
+
+        .surname>.letter--0 {
+          animation: flickr 6s ease-in-out 6.69s infinite alternate both;
+        }
+
+        .surname>.letter--1 {
+          animation: flickr 6s ease-in-out 3.99s infinite alternate both;
+        }
+
+        .surname>.letter--2 {
+          animation: flickr 6s ease-in-out 0.97s infinite alternate both;
+        }
+
+        .surname>.letter--3 {
+          animation: flickr 6s ease-in-out 6.77s infinite alternate both;
+        }
+
+        .surname>.letter--4 {
+          animation: flickr 6s ease-in-out 6.51s infinite alternate both;
+        }
+
+        .surname>.letter--5 {
+          animation: flickr 6s ease-in-out 8.11s infinite alternate both;
+        }
+
+        .surname>.letter--6 {
+          animation: flickr 6s ease-in-out 7.28s infinite alternate both;
+        }
+
+        .surname>.letter--7 {
+          animation: flickr 6s ease-in-out 2.13s infinite alternate both;
+        }
+
+        .surname>.letter--8 {
+          animation: flickr 6s ease-in-out 9.53s infinite alternate both;
+        }
+
+        @keyframes flickr {
+
+          0%,
+          2%,
+          35%,
+          37%,
+          39%,
+          41%,
+          100% {
+            opacity: 1;
+          }
+
+          1%,
+          3%,
+          34%,
+          36%,
+          38%,
+          40% {
+            opacity: 0;
+          }
+        }
+
+        @keyframes border-flickr {
+
+          0%,
+          2%,
+          4%,
+          6%,
+          33%,
+          35%,
+          37%,
+          39%,
+          41%,
+          100% {
+            border: 2px solid white;
+            box-shadow: #a48ff2 0px 0px 10px, inset #a48ff2 2px 2px 10px;
+          }
+
+          1%,
+          3%,
+          5%,
+          34%,
+          36%,
+          38%,
+          40% {
+            border-color: transparent;
+            box-shadow: unset;
+          }
+        }
+      </style>
+      <body>
+        <main class="container">
+          <section class="name">
+            <span class="letter letter--0">H</span>
+            <span class="letter letter--1">a</span>
+            <span class="letter letter--2">p</span>
+            <span class="letter letter--3">p</span>
+            <span class="letter letter--4">y</span>
+          </section>
+          <section class="surname">
+            <span class="letter letter--0">H</span>
+            <span class="letter letter--1">a</span>
+            <span class="letter letter--2">c</span>
+            <span class="letter letter--3">k</span>
+            <span class="letter letter--4">i</span>
+            <span class="letter letter--5">n</span>
+            <span class="letter letter--6">n</span>
+            <span class="letter letter--7">g</span>
+          </section>
+        </main>
+      </body>
+    </html>
+  </foreignobject>
+</svg>
