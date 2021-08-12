@@ -14,13 +14,13 @@ const getPage = async (isDev: boolean) => {
   return _page;
 };
 
-export const getScreenshot = async (html: string, type: FileType, isDev: boolean) => {
+export const getScreenshot = async (url: string, type: FileType, isDev: boolean) => {
   const page = await getPage(isDev);
   await page.setViewport({
     width: 2048,
     height: 1170,
   });
-  await page.setContent(html);
+  await page.goto(url);
   const file = await page.screenshot({ type });
   return file;
 };

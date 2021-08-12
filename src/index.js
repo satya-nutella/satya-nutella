@@ -1,9 +1,8 @@
-import { h, render } from "preact";
-import { useEffect, useState } from "preact/hooks";
-import querystring from "query-string";
+import "./style";
+import { render } from "preact";
+import { useState, useEffect } from "preact/hooks";
 
 function App() {
-
   const [fixtures, setFixtures] = useState({
     headerMenu: [
       { notificationCount: 0, text: "Home" },
@@ -130,11 +129,9 @@ function App() {
               </div>
             </div>
             <div className="channel-feed__body">
-              {
-                fixtures.messages.map(message => (
-                  <FeedMessage message={message} />
-                ))
-              }
+              {fixtures.messages.map((message) => (
+                <FeedMessage message={message} />
+              ))}
             </div>
             <div className="channel-feed__footer">
               <form
@@ -151,7 +148,7 @@ function App() {
                       id="message"
                       className="form-control"
                       name="message"
-                    ></textarea>
+                    />
                   </div>
                 </div>
                 <div className="form-footer">
@@ -168,13 +165,13 @@ function App() {
             <TextHeading3 $as="h4">What's this?</TextHeading3>
             <TextParagraph1>
               This is the social hub of a hacker named <strong>meehawk</strong>.
-              A <em>hackerman</em> true to his soul, Meehawk build this cyberspace
-              for folks obsessed with Cyberpunk. Folks, who, as soon as they get 
-              inside their partner you pull out a laptop and put it on their back 
-              and shout "I'm in".
+              A <em>hackerman</em> true to his soul, Meehawk build this
+              cyberspace for folks obsessed with Cyberpunk. Folks, who, as soon
+              as they get inside their partner you pull out a laptop and put it
+              on their back and shout "I'm in".
             </TextParagraph1>
             <TextParagraph1>
-              Think you've played the game? You' might be able to pick-up some 
+              Think you've played the game? You' might be able to pick-up some
               easter eggs embedded in the image
             </TextParagraph1>
           </Pad>
@@ -399,4 +396,9 @@ const IconShop = MakeIcon(
   <path d="M16.53 7l-.564 2h-15.127l-.839-2h16.53zm-14.013 6h12.319l.564-2h-13.722l.839 2zm5.983 5c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm11.305-15l-3.432 12h-13.017l.839 2h13.659l3.474-12h1.929l.743-2h-4.195zm-6.305 15c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
 );
 
-render(<App />, document.getElementById("root"));
+if (typeof window !== "undefined") {
+  const root = document.createElement("div")
+  root.id = "root";
+  document.body.appendChild(root);
+  render(<App />, root);
+}

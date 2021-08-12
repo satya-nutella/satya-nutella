@@ -1,22 +1,21 @@
 import { IncomingMessage, ServerResponse } from "http";
 import { getScreenshot } from "./_lib/chromium";
-import { getHtml } from "./_lib/template";
 
+const baseUrl = process.env.VERCEL_URL || "http://localhost:3000";
 const isDev = !process.env.AWS_REGION;
 const isHtmlDebug = process.env.HTML_DEBUG === "1";
 
 const handler = async (req: IncomingMessage, res: ServerResponse) => {
   try {
-    const html = getHtml();
     const fileType = "png";
 
     if (isHtmlDebug) {
       res.setHeader("Content-Type", "text/html");
-      res.end(html);
+      res.end(`<h1>In debug mode</h1>`);
       return;
     }
 
-    const file = await getScreenshot(html, fileType, isDev);
+    const file = await getScreenshot(baseUrl, fileType, isDev);
     res.statusCode = 200;
     res.setHeader("Content-Type", `image/${fileType}`);
     res.setHeader(

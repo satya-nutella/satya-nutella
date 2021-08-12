@@ -3,6 +3,7 @@
 node_modules
 api/dist
 public/dist
+build/
 .env
 _snowpack
 /index.html
