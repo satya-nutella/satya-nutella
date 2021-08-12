@@ -17,10 +17,11 @@ const getPage = async (isDev: boolean) => {
 export const getScreenshot = async (url: string, type: FileType, isDev: boolean) => {
   const page = await getPage(isDev);
   await page.setViewport({
-    width: 2048,
-    height: 1170,
+    width: 1200,
+    height: 800,
   });
   await page.goto(url);
+  await page.waitForNavigation();
   const file = await page.screenshot({ type });
   return file;
 };
