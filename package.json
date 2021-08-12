@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "npx snowpack build && tsc -p api/tsconfig.json",
+    "build:web": "snowpack build"
+  },
+  "dependencies": {
+    "@octokit/graphql": "^4.6.4",
+    "@types/ejs": "^3.0.7",
+    "chrome-aws-lambda": "10.1.0",
+    "dayjs": "^1.10.6",
+    "ejs": "^3.1.6",
+    "marked": "2.1.3",
+    "preact": "^10.5.14",
+    "puppeteer-core": "10.1.0",
+    "query-string": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/marked": "^2.0.4",
+    "@types/puppeteer": "^5.4.4",
+    "@types/puppeteer-core": "^5.4.0",
+    "snowpack": "^3.8.6",
+    "typescript": "^4.3.5"
+  }
+}

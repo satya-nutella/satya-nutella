@@ -1,0 +1,9 @@
+.now
+.vercel
+node_modules
+api/dist
+public/dist
+.env
+_snowpack
+/index.html
+/script.js
