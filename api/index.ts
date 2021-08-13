@@ -1,8 +1,9 @@
 import { IncomingMessage, ServerResponse } from "http";
 import { getScreenshot } from "./_lib/chromium";
+import { CONSTANTS } from "./_lib/util";
 
 const isDev = !process.env.AWS_REGION;
-const baseUrl =  process.env.DEPLOYMENT_URL || "http://localhost:3000";
+const baseUrl = process.env.DEPLOYMENT_URL || "http://localhost:3000";
 const isHtmlDebug = process.env.HTML_DEBUG === "1";
 
 const handler = async (req: IncomingMessage, res: ServerResponse) => {
@@ -15,10 +16,15 @@ const handler = async (req: IncomingMessage, res: ServerResponse) => {
       return;
     }
 
+    const cacheSeconds = CONSTANTS.THIRTY_MINUTES;
+
     const file = await getScreenshot(baseUrl, fileType, isDev);
     res.statusCode = 200;
     res.setHeader("Content-Type", `image/${fileType}`);
-    res.setHeader('Cache-Control', `public, no-transform, s-maxage=2592000, max-age=2592000`);
+    res.setHeader(
+      "Cache-Control",
+      `public, s-maxage=${cacheSeconds}, max-age=${cacheSeconds}`
+    );
     res.end(file);
   } catch (e) {
     res.statusCode = 500;
