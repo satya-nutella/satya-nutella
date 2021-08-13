@@ -21,7 +21,7 @@ export const getScreenshot = async (url: string, type: FileType, isDev: boolean)
     height: 800,
   });
   await page.goto(url);
-  await page.waitForNavigation();
+  await page.waitForTimeout(5000);
   const file = await page.screenshot({ type });
   return file;
 };
