@@ -18,6 +18,7 @@ const handler = async (req: IncomingMessage, res: ServerResponse) => {
     const file = await getScreenshot(baseUrl, fileType, isDev);
     res.statusCode = 200;
     res.setHeader("Content-Type", `image/${fileType}`);
+    res.setHeader('Cache-Control', `public, no-transform, s-maxage=2592000, max-age=2592000`);
     res.end(file);
   } catch (e) {
     res.statusCode = 500;
