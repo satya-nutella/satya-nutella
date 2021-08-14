@@ -14,14 +14,19 @@ const getPage = async (isDev: boolean) => {
   return _page;
 };
 
-export const getScreenshot = async (url: string, type: FileType, isDev: boolean) => {
+export const getScreenshot = async (
+  url: string,
+  type: FileType,
+  isDev: boolean
+) => {
   const page = await getPage(isDev);
   await page.setViewport({
     width: 1200,
     height: 800,
   });
-  await page.goto(url);
-  await page.waitForTimeout(2500);
+  await page.goto(url, {
+    waitUntil: "networkidle0",
+  });
   const file = await page.screenshot({ type });
   return file;
 };
