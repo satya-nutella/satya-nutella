@@ -569,3 +569,10 @@ textarea {
   align-self: flex-start;
   box-shadow: -6px -4px 24px rgba(156, 50, 48, 0.4);
 }
+
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
+}
