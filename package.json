@@ -17,7 +17,9 @@
       "eslint-config-synacor",
       "prettier"
     ],
-    "plugins": ["prettier"],
+    "plugins": [
+      "prettier"
+    ],
     "rules": {
       "new-cap": 0,
       "react/jsx-no-bind": 0,
@@ -39,12 +41,14 @@
     "preact": "^10.5.14",
     "preact-compat": "^3.19.0",
     "puppeteer-core": "10.1.0",
-    "query-string": "^7.0.1"
+    "query-string": "^7.0.1",
+    "twemoji": "^13.1.0"
   },
   "devDependencies": {
     "@types/marked": "^2.0.4",
     "@types/puppeteer": "^5.4.4",
     "@types/puppeteer-core": "^5.4.0",
+    "@types/twemoji": "^12.1.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-synacor": "^3.0.5",

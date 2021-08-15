@@ -2,6 +2,7 @@ import { IncomingMessage, ServerResponse } from "http";
 import dayjs from "dayjs";
 import { graphql } from "@octokit/graphql";
 import { Issue } from "./_lib/types";
+import { emojify } from "./_lib/util";
 
 const client = graphql.defaults({
   headers: {
@@ -33,15 +34,17 @@ const handler = async (req: IncomingMessage, res: ServerResponse) => {
         `
     );
 
-    const messages = result.repository.issue.comments.edges.map((edge: { node: Issue }) => {
-      const { node } = edge;
-      return {
-        id: node.id,
-        content: node.bodyText,
-        author: node.author.login,
-        dateTime: dayjs(node.publishedAt).format("HH:mm"),
-      };
-    });
+    const messages = result.repository.issue.comments.edges.map(
+      (edge: { node: Issue }) => {
+        const { node } = edge;
+        return {
+          id: node.id,
+          content: emojify(node.bodyText),
+          author: node.author.login,
+          dateTime: dayjs(node.publishedAt).format("HH:mm"),
+        };
+      }
+    );
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
