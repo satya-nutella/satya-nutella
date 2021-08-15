@@ -1,6 +1,14 @@
 import "./style";
 import { render } from "preact";
 import { useState, useEffect } from "preact/hooks";
+import DOMPurify from "dompurify";
+import parse from "html-react-parser";
+
+function sanitize(htmlString) {
+  return DOMPurify.sanitize(htmlString, {
+    USE_PROFILES: { html: true },
+  });
+}
 
 function App() {
   const [fixtures, setFixtures] = useState({
@@ -167,7 +175,7 @@ function App() {
               This is the social hub of a hacker named <strong>meehawk</strong>.
               A <em>hackerman</em> true to his soul, Meehawk build this
               cyberspace for folks obsessed with Cyberpunk. Folks, who, as soon
-              as they get inside their partner you pull out a laptop and put it
+              as they get inside their partner, pull out a laptop and put it
               on their back and shout "I'm in".
             </TextParagraph1>
             <TextParagraph1>
@@ -196,7 +204,7 @@ function FeedMessage({ message }) {
   return (
     <div className="message">
       <div className="message__body">
-        <div>{message.content}</div>
+        <div>{parse(sanitize(message.content))}</div>
       </div>
       <div className="message__footer">
         <span className="message__authoring">{message.author}</span>
@@ -397,7 +405,7 @@ const IconShop = MakeIcon(
 );
 
 if (typeof window !== "undefined") {
-  const root = document.createElement("div")
+  const root = document.createElement("div");
   root.id = "root";
   document.body.appendChild(root);
   render(<App />, root);
