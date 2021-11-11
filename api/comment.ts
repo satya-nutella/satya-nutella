@@ -1,7 +1,7 @@
 import { IncomingMessage, ServerResponse } from "http";
 import dayjs from "dayjs";
 import { graphql } from "@octokit/graphql";
-import { Issue } from "./_lib/types";
+import { Discussion, Issue } from "./_lib/types";
 import { emojify } from "./_lib/util";
 
 const client = graphql.defaults({
@@ -16,7 +16,7 @@ const handler = async (req: IncomingMessage, res: ServerResponse) => {
       `
             query { 
                 repository(name: "meehawk", owner: "meehawk") {
-                    issue(number: 3) {
+                    discussion(number: 11) {
                         comments(last: 4) {
                             edges {
                                 node {
@@ -34,8 +34,8 @@ const handler = async (req: IncomingMessage, res: ServerResponse) => {
         `
     );
 
-    const messages = result.repository.issue.comments.edges.map(
-      (edge: { node: Issue }) => {
+    const messages = result.repository.discussion.comments.edges.map(
+      (edge: { node: Discussion }) => {
         const { node } = edge;
         return {
           id: node.id,

@@ -8,3 +8,12 @@ export type Issue = {
         login: string;
     }
 }
+
+export type Discussion = {
+    bodyText: string;
+    publishedAt: string;
+    id: string;
+    author: {
+        login: string;
+    }
+}
