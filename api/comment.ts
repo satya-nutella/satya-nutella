@@ -1,7 +1,7 @@
 import { IncomingMessage, ServerResponse } from "http";
 import dayjs from "dayjs";
 import { graphql } from "@octokit/graphql";
-import { Discussion, Issue } from "./_lib/types";
+import { Discussion } from "./_lib/types";
 import { emojify } from "./_lib/util";
 
 const client = graphql.defaults({
