@@ -174,9 +174,7 @@ function App() {
             <TextParagraph1>
               This is the social hub of a hacker named <strong>meehawk</strong>.
               A <em>hackerman</em> true to his soul, Meehawk build this
-              cyberspace for folks obsessed with Cyberpunk. Folks, who, as soon
-              as they get inside their partner, pull out a laptop and put it
-              on their back and shout "I'm in".
+              cyberspace for folks obsessed with Cyberpunk.
             </TextParagraph1>
             <TextParagraph1>
               Think you've played the game? You' might be able to pick-up some
