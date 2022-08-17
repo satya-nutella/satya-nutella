@@ -16,7 +16,7 @@ const handler = async (req: IncomingMessage, res: ServerResponse) => {
       `
             query { 
                 repository(name: "meehawk", owner: "meehawk") {
-                    discussion(number: 11) {
+                    discussion(number: 19) {
                         comments(last: 4) {
                             edges {
                                 node {
