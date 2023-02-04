@@ -1,5 +1,5 @@
 
-<h1 align="center">Want to say hi? I'd love chatting with you!</h1>
+<h1 align="center">Want to say hello? I'd love chatting with you!</h1>
 
 <img src="https://meehawk.vercel.app/api?_vercel_no_cache=1" alt="cyberspace" width="100%" />
 
