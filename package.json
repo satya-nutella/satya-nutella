@@ -1,7 +1,7 @@
 {
   "private": true,
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "scripts": {
     "dev:web": "preact watch",
