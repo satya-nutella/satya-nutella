@@ -172,8 +172,8 @@ function App() {
           <Pad>
             <TextHeading3 $as="h4">What's this?</TextHeading3>
             <TextParagraph1>
-              This is the social hub of a hacker named <strong>meehawk</strong>.
-              A <em>hackerman</em> true to his soul, Meehawk build this
+              This is the social hub of a hacker named <strong>satya-nutella</strong>.
+              A <em>hackerman</em> true to his soul, Satya Nutella build this
               cyberspace for folks obsessed with Cyberpunk.
             </TextParagraph1>
             <TextParagraph1>

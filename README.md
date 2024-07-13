@@ -4,7 +4,7 @@
 <img src="https://meehawk.vercel.app/api?_vercel_no_cache=1" alt="cyberspace" width="100%" />
 
 <p align="center">
-     👾 Leave a <em>comment</em> on <a href="https://github.com/meehawk/meehawk/discussions/19">this discussion</a> to get featured on my <code>Cyberspace</code> 👾
+     👾 Leave a <em>comment</em> on <a href="https://github.com/satya-nutella/satya-nutella/discussions/19">this discussion</a> to get featured on my <code>Cyberspace</code> 👾
 </p>
 
 

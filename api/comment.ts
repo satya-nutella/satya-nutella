@@ -15,7 +15,7 @@ const handler = async (req: IncomingMessage, res: ServerResponse) => {
     const result: any = await client(
       `
             query { 
-                repository(name: "meehawk", owner: "meehawk") {
+                repository(name: "satya-nutella", owner: "satya-nutella") {
                     discussion(number: 19) {
                         comments(last: 4) {
                             edges {
